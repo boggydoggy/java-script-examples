@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Examples of Java Script Basic</title>
+</head>
+<body>
+
+  <h2>Change inner text</h2>
+  <p id="inner">JavaScript can change HTML content.</p>
+  <button type="button" onclick='document.getElementById("inner").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+  <h2>Change Image Source</h2>
+  <button onclick="document.getElementById('myImage').src='images/lightbulb_on.png'">Turn on the light</button>
+  <img id="myImage" src="images/lightbulb_off.png" style="width:100px">
+  <button onclick="document.getElementById('myImage').src='images/lightbulb_off.png'">Turn off the light</button>
+
+  <h2>Change element style</h2>
+  <p id="size">JavaScript can change the style of an HTML element.</p>
+  <button type="button" onclick="document.getElementById('size').style.fontSize='35px'">Click Me!</button>
+
+</body>
+</html>
