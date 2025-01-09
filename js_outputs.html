@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Examples of js output</title>
+</head>
+<body>
+<h2>Using document.write()</h2>
+<script>
+  document.write("Write using document.write(). <br>");
+  document.write("This can calcultate numbers, 5 + 6 = " + (5 + 6));
+</script>
+<p>Never call document.write after the document has finished loading.
+It will overwrite the whole document.</p>
+
+<h2>Using window.alert()</h2>
+<button type="button" onclick="showAlert()">Show Alert</button>
+<script>
+  function showAlert() {
+    window.alert("Alert!");
+    window.alert("This can calcultate numbers, 5 + 6 = " + (5 + 6));
+  }
+</script>
+
+<h2>Using console.log()</h2>
+<button type="button" onclick="printLog()">Print Log</button>
+<script>
+  function printLog() {
+    console.log("====Printing Log...====");
+    console.log("This can calcultate numbers, 5 + 6 = " + (5 + 6));
+  }
+</script>
+
+<h2>Using window.print()</h2>
+<button onclick="window.print()">Print this page</button>
+</body>
+</html>

@@ -4,7 +4,6 @@
   <title>Examples of Java Script Basic</title>
 </head>
 <body>
-
   <h2>Change inner text</h2>
   <p id="inner">JavaScript can change HTML content.</p>
   <button type="button" onclick='document.getElementById("inner").innerHTML = "Hello JavaScript!"'>Click Me!</button>
@@ -17,6 +16,30 @@
   <h2>Change element style</h2>
   <p id="size">JavaScript can change the style of an HTML element.</p>
   <button type="button" onclick="document.getElementById('size').style.fontSize='35px'">Click Me!</button>
+
+  <h2>Hide elements</h2>
+  <p id="hide">JavaScript can hide HTML elements.</p>
+  <button type="button" onclick="document.getElementById('hide').style.display='none'">Hide!</button>
+  <button type="button" onclick="document.getElementById('hide').style.display='block'">Show!</button>
+
+  <h2>Using &lt;script&gt; tag</h2>
+  <p id="scriptBase"></p>
+  <script>
+    document.getElementById("scriptBase").innerHTML = "This text is pirnted by script";
+  </script>
+
+  <h2>Java script function</h2>
+  <p id="functionTest">A</p>
+  <button type="button" onclick="changeToA()">Change it to A</button>
+  <button type="button" onclick="changeToB()">Change it to B</button>
+  <script>
+    function changeToA() {
+      document.getElementById("functionTest").innerHTML = "A";
+    }
+    function changeToB() {
+      document.getElementById("functionTest").innerHTML = "B";
+    }
+  </script>
 
 </body>
 </html>
