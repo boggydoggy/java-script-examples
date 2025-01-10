@@ -4,19 +4,37 @@
   <title>Examples of JavaScript Statement</title>
 </head>
 <body>
-  <h2>JavaScript Statements</h2>
-  <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
-  <p id="demo"></p>
-
+  <h2>JavaScript Statements Using var</h2>
+  <p id="var"></p>
   <script>
-    let x, y, z;  // Statement 1
-    x = 5;        // Statement 2
-    y = 6;        // Statement 3
-    z = x + y;    // Statement 4
-
-    document.getElementById("demo").innerHTML = "The value of z is " + z + ".";  
+    // var is primitive variable, it is re-declarable, redefinitable, function-scope
+    var a, b, c;
+    a = 1;
+    b = 2;
+    var b = 5;
+    c = a - b;
+    document.getElementById("var").innerHTML = "The value of c is " + c + ".";
   </script>
 
-  
+  <h2>JavaScript Statements Using let</h2>
+  <p id="let"></p>
+  <script>
+    // let is upadated variable, so it is redefinitable, block-scope 
+    let x, y, z;
+    x = 5;        
+    y = 6;        
+    z = x + y;   
+    document.getElementById("let").innerHTML = "The value of z is " + z + ".";  
+  </script>
+
+  <h2>JavaScript Statements Using const</h2>
+  <p id="const"></p>
+  <script>
+    // const is constant, it must be defined and declared at the sametime, and it cant not be redefined, block-scope 
+    const q = 5;
+    const w = 6;
+    const e = q * w;
+    document.getElementById("const").innerHTML = "The value of e is " + e + ".";
+  </script>
 </body>
 </html>

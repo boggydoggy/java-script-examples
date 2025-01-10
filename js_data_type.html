@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Examples of data type</title>
+</head>
+<body>
+  <h2>Strings basic</h2>
+  <p id="string"></p>
+  <script>
+    let x = "This String is using double quotes";
+    let y = 'This String is using single quotes';
+    document.getElementById("string").innerHTML = x + "<br>" + y;
+  </script>
+
+  <h2>Strings with numbers</h2>
+  <p id="stringWithNumber"></p>
+  <p id="stringWithNumber2"></p>
+  <p id="stringWithNumber3"></p>
+  <script>
+    let testNumber = 20
+    let testString = "This is a test message";
+    document.getElementById("stringWithNumber").innerHTML = 5 + testNumber + testString;
+    document.getElementById("stringWithNumber2").innerHTML = 5 + testString + testNumber;
+    document.getElementById("stringWithNumber3").innerHTML = testString + 5 + testNumber;
+  </script>
+
+  <hr>
+
+  <h2>Numbers basic</h2>
+  <p id="number"></p>
+  <script>
+    let x2 = 34.00;
+    let y2 = 34;
+    document.getElementById("number").innerHTML =
+    "defined variable x is 34.00 but it is " + x2 + "<br>" + "defined variable y is 34, it is " + y2 + "<br>" + "so, Is x equal to y? " + (x2 === y2);
+  </script>
+
+  <h2>Exponential Notation</h2>
+  <p id="exponential"></p>
+  <script>
+    let a = 123e5;
+    let b = 123e-5;
+    let a_ = 123e+5;
+    document.getElementById("exponential").innerHTML = "123e5 = " + a + "<br>" + "123e-5 = " + b + "<br>" + "123e+5 = " + a_;
+  </script>
+
+  <h2>NaN(Not a Number)</h2>
+  <p id="nan"></p>
+  <script>
+    document.getElementById("nan").innerHTML = 
+    "Basic Nan: 100 / Apple = " + (100 / "Apple") + "<br>" +
+    "If a number divded by a numeric string, then becomes a number: 100 / '10' = " + (100 / "10") + "<br>" +
+    "Checking result is NaN: is (100 / Apple) Nan? " + isNaN(100 / "Apple") + "<br>" +
+    "Nan is treat as number: Nan + 5 = " + (NaN + 5);
+  </script>
+  <hr>
+
+  <h2>BigInt</h2>
+  <p id="bigInt"></p>
+  <script>
+    let justInt = 123456789012345678901234567890;
+    let bigInt = BigInt("123456789012345678901234567890");
+    let bigInt2 = 123456789012345678901234567890n;
+    document.getElementById("bigInt").innerHTML = "the printed number is 123456789012345678901234567890<br>" + 
+    "Number: " + justInt + "<br>" + 
+    "BigInt: " + bigInt + "<br>" + 
+    "Second BigInt: " + bigInt2 + "<br>" + 
+    "is Number equal to BigInt? " + (justInt == bigInt) + "<br>" +
+    "is BigInt equal to bigInt2? " + (bigInt === bigInt2);
+  </script>
+
+  <h2>BigInt Operate</h2>
+  <p id="operate"></p>
+  <script>
+    let plus = bigInt + bigInt2;
+    let minus = bigInt - (bigInt2 + 5n);
+    let mutliply = bigInt * bigInt2;
+    let divde = 8n / 3n;
+    document.getElementById("operate").innerHTML = "123456789012345678901234567890 + 123456789012345678901234567890 = " + plus + "<br>" +
+    "123456789012345678901234567890 - 123456789012345678901234567895 = " + minus + "<br>" +
+    "123456789012345678901234567890 * 123456789012345678901234567890 = " + mutliply + "<br>" +
+    "8n / 3n = " + divde;
+  </script>
+
+  <hr>
+
+  <h2>Boolean basic</h2>
+  <p id="boolean"></p>
+  <script>
+    document.getElementById("boolean").innerHTML =
+    "Boolean Basic using (10 > 9): " + (10 > 9) + "<br>" +
+    "Boolean Basic using Boolean(10 > 9): " + Boolean(10 > 9);
+  </script>
+
+  <h2>Boolean that always true / false</h2>
+  <p id="alwaysTrue"></p>
+  <script>
+    document.getElementById("alwaysTrue").innerHTML = 
+    "100 is " + Boolean(100) + "<br>" +
+    "3.14 is " + Boolean(3.14) + "<br>" +
+    "-15 is " + Boolean(-15) + "<br>" +
+    "Any (not empty) string is " + Boolean("Hello") + "<br>" +
+    "Even the string 'false' is " + Boolean('false') + "<br>" +
+    "Any expression (except zero) is " + Boolean(1 + 7 + 3.14);
+  </script>
+
+  <h2>Boolean that always false</h2>
+  <p id="alwaysFalse"></p>
+  <script>
+    let undefinedVar;
+    document.getElementById("alwaysFalse").innerHTML = 
+    "0 is " + Boolean(0) + "<br>" +
+    "-0 is " + Boolean(-0) + "<br>" +
+    "''(empty string) is " + Boolean("") + "<br>" +
+    "undefinedVar is " + Boolean(undefinedVar) + "<br>" +
+    "null is " + Boolean(null) + "<br>" +
+    "NaN(10 / Hello) is " + Boolean(10 / "hello");
+  </script>
+
+  <hr>
+
+  <h2>Undefined</h2>
+  <p id="undefinedCar"></p>
+  <script>
+    let undefinedCar;
+    let undefinedBus = undefined;
+    let undefinedTrain = "";
+    document.getElementById("undefinedCar").innerHTML =
+    "variable car is " + undefinedCar + " and its type is " + typeof undefinedCar + "<br>" +
+    "variable bus is " + undefinedBus + " and its type is " + typeof undefinedBus + "<br>" +
+    "variable train is " + undefinedTrain + " and its type is " + typeof undefinedTrain;
+  </script>
+
+  <hr>
+
+  <h2>Null</h2>
+  <p id="null"></p>
+  <p id="compareBetweenNullAndUndefined">
+  <script>
+    let nullCar = null;
+    document.getElementById("null").innerHTML = "variable car is " + nullCar + " and its type is " + typeof nullCar;
+    document.getElementById("compareBetweenNullAndUndefined").innerHTML = "null == undefined: " + (nullCar == undefined) + ", null === undefined: " + (null === undefined);
+  </script>
+
+</body>
+</html>

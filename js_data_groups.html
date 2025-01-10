@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Examples of Array</title>
+</head>
+<body>
+  <h2>Arrays</h2>
+  <p id="array"></p>
+  <p id="array2"></p>
+  <p id="array3"></p>
+  <p id="array4"></p>
+  <script>
+    let arr = [1, 2, 3]
+    document.getElementById("array").innerHTML = "elements of an array: " + arr + ", and first element of an array: " + arr[0];
+    arr[2] = 4;
+    document.getElementById("array2").innerHTML = "elements of the array: " + arr + ", and changed element of the array: " + arr[2] + ", and length of the array: " + arr.length;
+    arr[3] = 8;
+    document.getElementById("array3").innerHTML = "elements of the array: " + arr + ", and added element of the array: " + arr[3] + ", and length of the array: " + arr.length;
+    arr.push(16);
+    document.getElementById("array4").innerHTML = "elements of the array: " + arr + ", and added element of the array: " + arr[4] + ", and length of the array: " + arr.length;
+  </script>
+
+  <hr>
+  <h2>Object</h2>
+</body>
+</html>
